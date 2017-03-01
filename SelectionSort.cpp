@@ -50,7 +50,7 @@ void print(std::vector<int> toSort)
 //@return sorted vector
 std::vector<int> selectionSort(std::vector<int> toSort)
 {
-    int min=0; //create variable to hold min value in vector
+    int min=0; //create variable to hold min value index in vector
 
     //nested for loops, we loop vector size -1 because we need one less comparison
     for (int i=0;i<toSort.size()-1;++i)
