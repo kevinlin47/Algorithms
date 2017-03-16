@@ -4,7 +4,7 @@
 #include<vector>
 
 std::vector<int> selectionSort(std::vector<int>); //function prototype, for selection sort
-void print(std::vector <int>); //function prototype for array printing
+void print(std::vector <int>); //function prototype for vector printing
 
 int main()
 {
