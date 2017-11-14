@@ -50,7 +50,7 @@ bool isPrime(int toCheck)
         }
     }
 
-    //return false, since the loop ended
+    //return true, since the loop ended
     return true;
 
 }
