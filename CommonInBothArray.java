@@ -19,7 +19,7 @@ public class CommonInBothArray {
      * @param args the command line arguments
      */
     
-    //Function returns number of common integers in two sorted arrays
+    //Function returns number of common integers in two arrays
     //@Param two integer arrays 
     //@Return number of integers contained in both arrays
     public static int numCommonIntegers(int a[], int b[])
