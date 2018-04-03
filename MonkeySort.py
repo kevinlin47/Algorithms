@@ -6,5 +6,7 @@ def isSorted(data):
             return False
     return True
 
-
+def monkeysort(data):
+    while not isSorted(data):
+        random.shuffle(data)
     
