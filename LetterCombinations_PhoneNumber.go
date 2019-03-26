@@ -1,14 +1,15 @@
 package main
 
+import "fmt"
+
 func main() {
-	digits := "ab"
-	letterCombinations(digits)
+	digits := "23"
+	fmt.Println(letterCombinations(digits))
 }
 
-func search(list []string, str string, length int, digits string, dict map[byte][]byte) {
-
+func search(list *[]string, str string, length int, digits string, dict map[byte][]byte) {
 	if length == len(digits) {
-		list = append(list, str)
+		*list = append(*list, str)
 		return
 	}
 
@@ -17,7 +18,6 @@ func search(list []string, str string, length int, digits string, dict map[byte]
 	for _, c := range currentSet {
 		search(list, str+""+string(c), length+1, digits, dict)
 	}
-
 }
 
 func letterCombinations(digits string) []string {
@@ -33,7 +33,7 @@ func letterCombinations(digits string) []string {
 	dict['8'] = []byte{'t', 'u', 'v'}
 	dict['9'] = []byte{'w', 'x', 'y', 'z'}
 
-	search(toReturn, "", 0, digits, dict)
+	search(&toReturn, "", 0, digits, dict)
 
 	return toReturn
 }
